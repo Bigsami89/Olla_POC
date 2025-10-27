@@ -13,6 +13,9 @@ function buildPrompt(context, question) {
 Contexto:
 ${context}
 
+
+
+
 Pregunta: ${question}
 
 Respuesta:`;
