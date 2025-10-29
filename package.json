@@ -1,17 +1,40 @@
 {
   "name": "rag-poc-fastify",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sistema RAG (Retrieval-Augmented Generation) con Fastify y Ollama",
   "main": "server.js",
-  "type": "module", 
+  "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bigsami89/Olla_POC.git"
+  },
+  "keywords": [
+    "rag",
+    "ollama",
+    "fastify",
+    "chatbot",
+    "ai"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bigsami89/Olla_POC/issues"
+  },
+  "homepage": "https://github.com/Bigsami89/Olla_POC#readme",
+  "directories": {
+    "test": "test"
   },
   "dependencies": {
-    "fastify": "^4.27.0",
-    "fastify-plugin": "^4.5.1", 
+    "@fastify/cors": "^8.5.0",
+    "@fastify/static": "^6.12.0",
+    "fastify": "^4.29.1",
+    "fastify-plugin": "^4.5.1",
     "langchain": "^0.1.37",
-    "ollama": "^0.5.0",
-    "pdf-parse": "^1.1.1"
+    "ollama": "^0.5.18",
+    "pdf-parse-new": "^1.4.1"
   }
 }

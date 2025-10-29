@@ -1,6 +1,6 @@
 import fp from 'fastify-plugin';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
-import pdf from 'pdf-parse';
+import pdf from 'pdf-parse-new';
 import { promises as fs } from 'fs';
 
 // --- Funciones de Lógica Vectorial (privadas del plugin) ---
@@ -97,5 +97,6 @@ async function vectorStorePlugin(fastify, options) {
 }
 
 export default fp(vectorStorePlugin, {
+  name: 'vectorStorePlugin',  // <- AGREGAR ESTO
   dependencies: ['configPlugin', 'ollamaPlugin'],
 });

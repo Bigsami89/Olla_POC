@@ -2,7 +2,7 @@ import fp from 'fastify-plugin';
 
 // Todas nuestras constantes de configuración
 const config = {
-  PDF_PATH: './documento.pdf',
+  PDF_PATH: '/home/samuel/Documentos/rag-poc-fastify/Prince.pdf',
   EMBEDDING_MODEL: 'nomic-embed-text',
   CHAT_MODEL: 'phi3',
   OLLAMA_HOST: 'http://localhost:11434',
@@ -18,4 +18,6 @@ async function configPlugin(fastify, options) {
   fastify.decorate('config', config);
 }
 
-export default fp(configPlugin);
+export default fp(configPlugin, {
+  name: 'configPlugin'  // <- AGREGAR ESTO
+});

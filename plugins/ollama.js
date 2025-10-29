@@ -25,5 +25,6 @@ async function ollamaPlugin(fastify, options) {
 // Declaramos que este plugin depende de 'configPlugin'
 // Fastify se asegurará de que 'configPlugin' se ejecute primero.
 export default fp(ollamaPlugin, {
+  name: 'ollamaPlugin', // <-- AÑADE ESTA LÍNEA
   dependencies: ['configPlugin'],
 });

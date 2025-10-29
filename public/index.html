@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Chatbot - Asistente Inteligente</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>🤖 Asistente Inteligente RAG</h1>
+            <p class="subtitle">Tu chatbot potenciado por IA que responde basándose en documentos reales</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Respuestas Precisas</h3>
+                    <p>Obtén información exacta extraída directamente de tus documentos</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Respuesta Rápida</h3>
+                    <p>Procesamiento veloz gracias a tecnología de vectorización avanzada</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>100% Confiable</h3>
+                    <p>Solo responde con información que se encuentra en tus fuentes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget">
+        <button id="chat-button" aria-label="Abrir chat">
+            <svg viewBox="0 0 24 24">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+            </svg>
+        </button>
+
+        <div id="chat-container">
+            <div class="chat-header">
+                <div class="chat-avatar">🤖</div>
+                <div class="chat-info">
+                    <h3>Asistente RAG</h3>
+                    <p>Siempre disponible para ayudarte</p>
+                </div>
+            </div>
+
+            <div id="chat-messages">
+                <div class="message bot">
+                    <div class="message-content">
+                        ¡Hola! 👋 Soy tu asistente inteligente. Puedo responder preguntas basándome en los documentos que tengo. ¿En qué puedo ayudarte hoy?
+                    </div>
+                </div>
+                <div class="typing-indicator" id="typing-indicator">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <input 
+                    type="text" 
+                    id="chat-input" 
+                    placeholder="Escribe tu pregunta aquí..."
+                    autocomplete="off"
+                >
+                <button id="send-button" aria-label="Enviar mensaje">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
